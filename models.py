@@ -14,7 +14,7 @@ class Team(Base):
     name = Column(String(50))
     rank = Column(Integer, nullable=False)
     players = relationship('Player', backref='team_name', lazy=True)
-    # games = relationship()
+    
     def __repr__(self):
         return '<Team %r>' % self.name
 
