@@ -5,13 +5,13 @@
 from database import Base, engine, db_session
 from models import Team, Player, Game
 Base.metadata.create_all(bind=engine)
-team1 = Team(name='Gryffindor', rank=1, captain_id=3)
+team1 = Team(name='Gryffindor', rank=1)
 db_session.add(team1)
-team2 = Team(name='Slytherin', rank=2, captain_id=4)
+team2 = Team(name='Slytherin', rank=2)
 db_session.add(team2)
-team3 = Team(name='Ravenclaw', rank=4, captain_id=7)
+team3 = Team(name='Ravenclaw', rank=4)
 db_session.add(team3)
-team4 = Team(name='Hufflepuff', rank=3, captain_id=6)
+team4 = Team(name='Hufflepuff', rank=3)
 db_session.add(team4)
 
 player1 = Player(name='Harry Potter', position='Seeker', team_name=team1)
