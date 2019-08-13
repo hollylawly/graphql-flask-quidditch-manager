@@ -13,8 +13,7 @@ class Team(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
     rank = Column(Integer, nullable=False)
-    players = relationship('Player', backref='team_name', lazy=True)
-    
+    players = relationship('Player', backref='on_team', lazy=True)
     def __repr__(self):
         return '<Team %r>' % self.name
 
@@ -25,6 +24,7 @@ class Player(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
     position = Column(String(50), nullable=False)
+    year = Column(Integer)
     team_id = Column(Integer, ForeignKey('teams.id'), nullable=False)
     
     def __repr__(self):
