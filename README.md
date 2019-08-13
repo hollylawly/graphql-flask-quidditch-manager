@@ -36,7 +36,7 @@ env\Scripts\activate
 Mac or Linux use:
 
 ```bash
-env/bin/activate
+. env/bin/activate
 ```
 
 Install our dependencies
@@ -48,9 +48,11 @@ pip install -r requirements.txt
 Populate the database with our mock data. First open up a Python shell by typing `python` in your terminal. Then paste in the following and press enter:
 
 ```bash
+
 from database import Base, engine, db_session
 from models import Team, Player, Game
 Base.metadata.create_all(bind=engine)
+
 team1 = Team(name='Gryffindor', rank=1)
 db_session.add(team1)
 team2 = Team(name='Slytherin', rank=2)
@@ -60,28 +62,28 @@ db_session.add(team3)
 team4 = Team(name='Hufflepuff', rank=3)
 db_session.add(team4)
 
-player1 = Player(name='Harry Potter', position='Seeker', team_name=team1)
+player1 = Player(name='Harry Potter', year=2, position='Seeker', on_team=team1)
 db_session.add(player1)
-player2 = Player(name='Draco Malfoy', position='Seeker', team_name=team1)
+player2 = Player(name='Draco Malfoy', year=2, position='Seeker', on_team=team2)
 db_session.add(player2)
-player3 = Player(name='Oliver Wood', position='Captain', team_name=team1)
+player3 = Player(name='Oliver Wood', year=4, position='Captain', on_team=team1)
 db_session.add(player3)
-player4 = Player(name='Marcus Flint', position='Captain', team_name=team2)
+player4 = Player(name='Vincent Crabbe', year=2, position='Beater', on_team=team2)
 db_session.add(player4)
-player5 = Player(name='Cho Chang', position='Seeker', team_name=team3)
+player5 = Player(name='Cho Chang', year=2, position='Seeker', on_team=team3)
 db_session.add(player5)
-player6 = Player(name='Cedric Diggory', position='Captain', team_name=team4)
+player6 = Player(name='Cedric Diggory', year=4, position='Captain', on_team=team4)
 db_session.add(player6)
-player7 = Player(name='Roger Davies', position='Captain', team_name=team3)
+player7 = Player(name='Roger Davies', year=3, position='Captain', on_team=team3)
 db_session.add(player7)
-player8 = Player(name='Gregory Goyle', position='Beater', team_name=team2)
+player8 = Player(name='Gregory Goyle', year=2, position='Beater', on_team=team2)
 db_session.add(player8)
-player9 = Player(name='Katie Bell', position='Chaser', team_name=team1)
+player9 = Player(name='Katie Bell', year=4, position='Chaser', on_team=team1)
 db_session.add(player9)
-player10 = Player(name='Zacharias Smith', position='Chaser', team_name=team4)
+player10 = Player(name='Zacharias Smith', year=3, position='Chaser', on_team=team4)
 db_session.add(player10)
 
-game1 = Game(level='Practice', child_id=7, winner_id=1, loser_id=2)
+game1 = Game(level='Practice', winner_id=1, loser_id=2)
 db_session.add(game1)
 game2 = Game(level='Practice', winner_id=4, loser_id=1)
 db_session.add(game2)
@@ -91,11 +93,11 @@ game4 = Game(level='Practice', winner_id=2, loser_id=4)
 db_session.add(game4)
 game5 = Game(level='Practice', winner_id=2, loser_id=3)
 db_session.add(game5)
-game6 = Game(level='Practice', child_id=8, winner_id=3, loser_id=4)
+game6 = Game(level='Practice', winner_id=3, loser_id=4)
 db_session.add(game6)
-game7 = Game(level='First', child_id=9, winner_id=1, loser_id=2)
+game7 = Game(level='First', winner_id=1, loser_id=2)
 db_session.add(game7)
-game8 = Game(level='First', child_id=9, winner_id=4, loser_id=3)
+game8 = Game(level='First', winner_id=4, loser_id=3)
 db_session.add(game8)
 game9 = Game(level='Final', winner_id=1, loser_id=4)
 db_session.add(game9)
