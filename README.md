@@ -10,7 +10,7 @@ Next clone this repo and enter into the root folder.
 
 ```bash
 git clone https://github.com/hollylawly/flask-graphql-quidditch-manager
-cd flask-graphql-quidditch
+cd flask-graphql-quidditch-manager
 ```
 
 Setup a virtual environment (not necessary, but recommended) so that the dependencies are all together and there are no conflicts.
