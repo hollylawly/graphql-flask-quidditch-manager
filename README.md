@@ -9,7 +9,7 @@ First install [Python](https://www.python.org/downloads/) if it's not already on
 Next clone this repo and enter into the root folder.
 
 ```bash
-git clone https://github.com/hollylawly/flask-graphql-quidditch
+git clone https://github.com/hollylawly/flask-graphql-quidditch-manager
 cd flask-graphql-quidditch
 ```
 
