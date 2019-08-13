@@ -24,7 +24,7 @@ class Player(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
     position = Column(String(50), nullable=False)
-    year = Column(Integer)
+    year = Column(Integer, nullable=False)
     team_id = Column(Integer, ForeignKey('teams.id'), nullable=False)
     
     def __repr__(self):
