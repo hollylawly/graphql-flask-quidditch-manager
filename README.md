@@ -1,6 +1,10 @@
 # GraphQL Quidditch Manager
 
-This application demonstrates how we can use Flask to build a GraphQL API that can create and return **flexible and meaningful data**. First we'll setup our backend using Flask and an SQLite database. Next we'll bring in GraphQL to build an API that will allow us to interact with quidditch teams, players, and games. Finally we'll see how we can use [Auth0 rules](https://auth0.com/docs/rules) to integration different authorization models.
+This application demonstrates how we can use Flask to build a GraphQL API that can create and return **flexible and meaningful data** and then leverage that data setup to assign on-the-fly permissions to users using **attribute-based access control** and **graph-based access control**.
+
+First we'll setup our backend using Flask and an SQLite database. Next we'll bring in GraphQL to build an API that will allow us to interact with quidditch teams, players, and games. Finally we'll see how we can use [Auth0 rules](https://auth0.com/docs/rules) to integrate the different access control models.
+
+For more background and a step-by-step, check out the accompanying article: [Dynamic Authorization with GraphQL and Rules](https://auth0.com/blog/authorization-series-pt-3-dynamic-authorization-with-graphql-and-rules)!
 
 # Getting Started
 
